@@ -19,14 +19,14 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-          <div className="mx-36 text-2xl">
+          <div className="text-2xl  w-full h-screen">
             <ClerkLoading>
-              <div className="flex flex-col items-center text-center mt-32">
+              <div className="flex flex-col justify-center items-center  w-full h-screen">
                 LOADING...
               </div>
             </ClerkLoading>
             <ClerkLoaded>
-              <Navbar />
+              {/* <Navbar />  u can still use it everywhere if u want to*/}
               {children}
             </ClerkLoaded>
           </div>
