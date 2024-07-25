@@ -13,6 +13,8 @@
     "@heroicons/react": "^2.1.5",
     "embla-carousel-auto-scroll": "^8.1.7",
     "embla-carousel-react": "^8.1.7",
+    "flowbite": "^2.4.1",
+    "ldrs": "^1.0.2",
     "mongodb": "^6.5.0",
     "mongoose": "^8.2.2",
     "next": "^14.0.0",

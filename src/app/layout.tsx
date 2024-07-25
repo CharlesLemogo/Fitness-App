@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkLoaded, ClerkLoading, ClerkProvider } from "@clerk/nextjs";
+// import 'ldrs/grid'
+// import type{} from 'ldrs'
+import { hourglass } from 'ldrs'
 import Navbar from "@/components/Navbar";
+
+
+// grid.register()
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,11 +24,17 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        
         <body className={inter.className}>
-          <div className="text-2xl  w-full h-screen">
+        <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/grid.js"></script>
+        <div className="text-2xl  w-full h-screen">
             <ClerkLoading>
-              <div className="flex flex-col justify-center items-center  w-full h-screen">
-                LOADING...
+              <div className="flex flex-col justify-center items-center bg-custom-bg bg-cover bg-blend-multiply bg-neutral-600 w-full h-screen">
+              <l-grid
+                size="80"
+                speed="1.5"
+                color="red" 
+              ></l-grid>
               </div>
             </ClerkLoading>
             <ClerkLoaded>
@@ -30,6 +42,7 @@ export default function RootLayout({
               {children}
             </ClerkLoaded>
           </div>
+          
         </body>
       </html>
     </ClerkProvider>

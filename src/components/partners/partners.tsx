@@ -59,7 +59,7 @@ export default function Partners() {
     <div className=' bg-[#2c2a26] pt-4'>
     <h1 className='text-4xl font-bold text-center  text-white'>Our Partners</h1>
     </div>
-    <div className="embla h-[40vh]" ref={emblaRef}>
+    <div className="embla lg:h-[40vh]" ref={emblaRef}>
     <div className="embla__container ">
       {partners.length > 0 ? (
         partners.map((partner) => (
@@ -70,7 +70,7 @@ export default function Partners() {
                 width={300}
                 height={300}
                 alt={partner.host}
-                className=" w-full h-full"
+                className="  h-full"
               />
             </Link>
           </div>
